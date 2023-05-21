@@ -58,6 +58,7 @@ Your contributions will help enrich the repository and benefit the development c
 
 This repository is licensed under GPLv3.
 Please refer to the attached DISCLAIMER for any concerns that may arise.
+
 ---
 
 We hope you find these guides helpful! If you have any questions or feedback, please don't hesitate to reach out. Happy coding!
