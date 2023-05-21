@@ -41,9 +41,7 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
 
 0. **Configurate Git to use Choco's install of GnuPG:**
 
-    Open a PowerShell instance (Administrator).
-    
-    Run the following command in the shell:
+    Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
     git config --global gpg.program "C:\Program Files (x86)\gnupg\bin\gpg.exe"
     ```
@@ -63,6 +61,7 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     ```powershell
     gpg --list-secret-keys --keyid-format long
     ```
+    
     The output will be something like this:
     ```
     gpg: checking the trustdb
