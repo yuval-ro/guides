@@ -5,15 +5,15 @@
 
 OMP offers various features, including:
 
-0. Themes: It comes with a collection of pre-configured themes that you can choose from, allowing you to customize the appearance of your prompt.
+1. Themes: It comes with a collection of pre-configured themes that you can choose from, allowing you to customize the appearance of your prompt.
 
-0. Segments: OMP allows you to add segments to your prompt, such as displaying the current Git branch, the current directory, or the status of your Git repository.
+1. Segments: OMP allows you to add segments to your prompt, such as displaying the current Git branch, the current directory, or the status of your Git repository.
 
-0. Customization: You can further customize your prompt by modifying the themes, creating your own custom themes, or adding and configuring segments according to your preferences.
+1. Customization: You can further customize your prompt by modifying the themes, creating your own custom themes, or adding and configuring segments according to your preferences.
 
-0. Compatibility: OMP is designed to work with various shells, including PowerShell, PowerShell Core, Windows Terminal, and more.
+1. Compatibility: OMP is designed to work with various shells, including PowerShell, PowerShell Core, Windows Terminal, and more.
 
-Please note that OMP is primarily focused on PowerShell, and if you are using a different shell, there might be alternative prompt customization frameworks available specific to that shell.
+Note that OMP is primarily focused on PowerShell, and if you are using a different shell, there might be alternative prompt customization frameworks available specific to that shell.
 
 ## Sources
 * https://ohmyposh.dev/docs/installation/windows
@@ -26,16 +26,17 @@ Please note that OMP is primarily focused on PowerShell, and if you are using a 
 
 ## First-time setup
 
-0. **Install Oh My Posh with Scoop:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command:
+1. **Install OMP using Scoop:**
+
+    Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
     scoop install oh-my-posh
     ```
 
-0. **Install fonts:**  
+1. **Install a Nerd Font:**
+
     OMP requires "Nerd Fonts", which are Monospace fonts augmented with symbols and icons.  
-    Without them, most of the themes will not display the prompts correctly.  
+    Without them, most of the themes will not display shell prompts correctly.  
     Run the following command:
     ```powershell
     oh-my-posh font install
@@ -43,7 +44,8 @@ Please note that OMP is primarily focused on PowerShell, and if you are using a 
     A menu will be listed, of all possible (free-to-use) Nerd Fonts catered by OMP.  
     Select one of your liking to install.
 
-0. **Configure the font in PowerShell and VSCode:**  
+1. **Set a Nerd Font for PowerShell and VSCode integrated terminal:**
+
     In PowerShell, right click the title bar, then select "Properties">"Font".  
     Select your installed font from the list and hit "OK".  
 
@@ -54,8 +56,8 @@ Please note that OMP is primarily focused on PowerShell, and if you are using a 
     "terminal.integrated.fontFamily": "NERD_FONT_NAME",
     ```
 
-0. **Configure theme:**  
-    In PowerShell, run the following command:
+1. **Configure theme:**  
+    Run the following command:
     ```PowerShell
     Get-PoshThemes
     ```
@@ -67,10 +69,11 @@ Please note that OMP is primarily focused on PowerShell, and if you are using a 
     code $PROFILE
     ```
 
-    Paste in the file the following command, where the URL is your selected theme's:
+    Paste in the file the following line, where the URL is your selected theme's:
     ```PowerShell
     oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/aliens.omp.json' | Invoke-Expression
     ```
+    
     Save and restart your shell.
 
 ## Removal
