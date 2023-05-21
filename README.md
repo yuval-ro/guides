@@ -2,7 +2,8 @@
 
 Welcome to the Development Tools Guides Repository! This repository contains a collection of guides for various development tools to assist you in your coding journey.
 
-READ THE ATTACHED DISCLAIMER & USE AT YOUR OWN RISK!
+<div style="color: red;">READ THE ATTACHED DISCLAIMER!</div>
+<div style="color: red;">USE AT YOUR OWN RISK!</div>
 
 ## Table of Contents
 
