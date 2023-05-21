@@ -22,18 +22,9 @@ GnuPG is available for various operating systems, including Windows, macOS, and 
 ## Recommendations
 * [Chocolatey](https://chocolatey.org/): Choco is a great tool for Windows devs.  
 If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).
-For those who don't want to use it - open a Git Bash instance instead, and skip to **step 5**.  
-It should be noted that you can even install Git using Choco.
-
+For those who don't want to use it: **open a Git Bash instance instead**, and skip to **step 3**.  
 
 ## Steps
-
-0. **Install Chocolatey:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command in the shell:  
-    ```powershell
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    ```
 
 0. **Install GnuPG via Choco:**  
     Run the following command in the shell:  
