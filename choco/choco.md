@@ -39,9 +39,7 @@ choco install firefox -y
 
 The `-y` flag will auto-accept any prompted installation disclaimer.
 
-Note that Choco will look up the Chocolatey Community Repository for any installed corresponding with your query.
-
-You can even query can a regex such as '`fire*`'.
+Note that Choco will look up the Chocolatey Community Repository for any packages corresponding with your query. You can even supply a regex such as '`fire*`'.
 
 It is a good practice to run the `search` command before installing, so you can select the exact package you are looking for:
 ```powershell
@@ -57,7 +55,7 @@ librefox-firefox 2.1 [Approved]
 ...
 ```
 
-Choose your desired package (with its exact listed name) and run the install command.
+Choose your package of choice (with its exact listed name) and run the `install` command.
 
 It is recommended to only install packages which are marked as Approved.
 
