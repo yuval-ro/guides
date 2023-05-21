@@ -1,21 +1,19 @@
 # Oh My Posh
 
 ## About
-[Oh My Posh](https://ohmyposh.dev/) is a framework for customizing and enhancing the prompt in your command-line interface (CLI), primarily designed for PowerShell. It provides a highly customizable and visually appealing prompt, allowing you to personalize your command-line experience.
+[Oh My Posh](https://ohmyposh.dev/) (OMP) is a framework for customizing and enhancing the prompt in your command-line interface (CLI), primarily designed for PowerShell. It provides a highly customizable and visually appealing prompt, allowing you to personalize your command-line experience.
 
-Oh My Posh offers various features, including:
+OMP offers various features, including:
 
 0. Themes: It comes with a collection of pre-configured themes that you can choose from, allowing you to customize the appearance of your prompt.
 
-0. Segments: Oh My Posh allows you to add segments to your prompt, such as displaying the current Git branch, the current directory, or the status of your Git repository.
+0. Segments: OMP allows you to add segments to your prompt, such as displaying the current Git branch, the current directory, or the status of your Git repository.
 
 0. Customization: You can further customize your prompt by modifying the themes, creating your own custom themes, or adding and configuring segments according to your preferences.
 
-0. Compatibility: Oh My Posh is designed to work with various shells, including PowerShell, PowerShell Core, Windows Terminal, and more.
+0. Compatibility: OMP is designed to work with various shells, including PowerShell, PowerShell Core, Windows Terminal, and more.
 
-By using Oh My Posh, you can enhance the visual appeal of your command-line prompt, make it more informative by displaying relevant information, and customize it to match your own style or workflow.
-
-Please note that Oh My Posh is primarily focused on PowerShell, and if you are using a different shell, there might be alternative prompt customization frameworks available specific to that shell.
+Please note that OMP is primarily focused on PowerShell, and if you are using a different shell, there might be alternative prompt customization frameworks available specific to that shell.
 
 ## Sources
 * https://ohmyposh.dev/docs/installation/windows
@@ -26,7 +24,7 @@ Please note that Oh My Posh is primarily focused on PowerShell, and if you are u
 ## Recommendations
 * [Consolas Nerd Font](https://github.com/wclr/my-nerd-fonts/blob/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf) 🏴‍☠️
 
-## Steps
+## First-time setup
 
 0. **Install Oh My Posh with Scoop:**  
     Open a PowerShell instance (Administrator).  
@@ -36,13 +34,13 @@ Please note that Oh My Posh is primarily focused on PowerShell, and if you are u
     ```
 
 0. **Install fonts:**  
-    Oh My Posh requires "Nerd Fonts", which are Monospace fonts augmented with symbols and icons.  
+    OMP requires "Nerd Fonts", which are Monospace fonts augmented with symbols and icons.  
     Without them, most of the themes will not display the prompts correctly.  
     Run the following command:
     ```powershell
     oh-my-posh font install
     ```
-    A menu will be listed, of all possible (free-to-use) Nerd Fonts catered by Oh My Posh.  
+    A menu will be listed, of all possible (free-to-use) Nerd Fonts catered by OMP.  
     Select one of your liking to install.
 
 0. **Configure the font in PowerShell and VSCode:**  
@@ -61,17 +59,22 @@ Please note that Oh My Posh is primarily focused on PowerShell, and if you are u
     ```PowerShell
     Get-PoshThemes
     ```
-    This will demonstrate all Oh My Posh's endorsed themes.  
-    Once you settled on one, say the "aliens" theme, find its Github URL in [Themes](https://ohmyposh.dev/docs/themes), go to its Github page, select "RAW", and copy the RAW Github URL.  
-    Run the following command, where the URL is your selected theme's:
+    This will demonstrate in the shell all of OMP's endorsed themes.  
+    Once you settled on one, say the "aliens" theme, find its Github URL in [Themes](https://ohmyposh.dev/docs/themes), go to its Github page, select "RAW", and copy the RAW Github URL.
+
+    Open your `$PROFILE` file via some text editor:
+    ```powershell
+    code $PROFILE
+    ```
+
+    Paste in the file the following command, where the URL is your selected theme's:
     ```PowerShell
     oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/aliens.omp.json' | Invoke-Expression
     ```
-    Done.
+    Save and restart your shell.
 
-0. **If you wish to uninstall:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command:
-    ```powershell
-    scoop uninstall oh-my-posh
-    ```
+## Removal
+Open a PowerShell instance (Administrator), and run the following command:
+```powershell
+scoop uninstall oh-my-posh
+```
