@@ -20,34 +20,46 @@ GnuPG is available for various operating systems, including Windows, macOS, and 
 
 
 ## Recommendations
-* [Chocolatey](https://chocolatey.org/): Choco is a great tool for Windows devs.  
+
+* [Chocolatey](https://chocolatey.org/): Choco is a great tool for Windows devs.
+
 If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).
+
 For those who don't want to use it: **open a Git Bash instance instead**, and skip to **step 3**.  
 
 ## Steps
 
-0. **Install GnuPG via Choco:**  
-    Run the following command in the shell:  
+0. **Install GnuPG via Choco:**
+
+    Open a new PowerShell instance (Administrator), and run the following command:
     ```powershell
     choco install gpg -y
     ```
+    
     After that, **restart you machine**.  
+    
     *This is done to refresh the shell's environment variables, so it will recognize the `gpg` command.
 
-0. **Configurate Git to use Choco's install of GnuPG:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command in the shell:  
+0. **Configurate Git to use Choco's install of GnuPG:**
+
+    Open a PowerShell instance (Administrator).
+    
+    Run the following command in the shell:
     ```powershell
     git config --global gpg.program "C:\Program Files (x86)\gnupg\bin\gpg.exe"
     ```
 
-0. **Generate a new key and copy its ID:**  
-    Run the following command in the shell, replacing the placeholders with your Github account credentials:  
+0. **Generate a new key and copy its ID:**
+
+    Run the following command in the shell, replacing the placeholders with your Github account credentials:
     ```powershell
     gpg --quick-generate-key "GITHUB_USERNAME <GITHUB_EMAIL>" rsa sign
     ```
-    You will be prompted to enter a **passphrase**.  
-    *Make sure you write it down, since GnuPG will ask for it whenever pushing commits to a remote!  
+    
+    You will be prompted to enter a **passphrase**.
+    
+    *Make sure you write it down, since GnuPG will ask for it whenever pushing commits to a remote!
+    
     Once done, run this:  
     ```powershell
     gpg --list-secret-keys --keyid-format long
@@ -66,17 +78,20 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     ```
     The key's id is ```FGFQZF4ERXDVALSJ```, copy it.  
 
-0. **Configurate Git to use the generated key:**  
+0. **Configurate Git to use the generated key:**
+
     Run the following command in the shell, replace the placeholder with the key's id:
     ```powershell
     git config --global user.signingkey "KEY_ID"
     ```
 
-0. **Export the key:**  
+0. **Export the key:**
+
     Run the following command in the shell, replace the placeholder with the key's id:
     ```powershell
     gpg --armor --export "KEY_ID"
     ```
+    
     The output will be something like this:
     ```
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -86,15 +101,22 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     =CcT7
     -----END PGP PUBLIC KEY BLOCK-----
     ```
+    
     Copy the entire above block, including the ```"-----BEGIN..."``` and ```"-----END..."``` lines.
 
-0. **Associate the exported key with your Github account:**  
+0. **Associate the exported key with your Github account:**
     
-    Go to: https://github.com/settings/keys.  
-    Click on "New GPG Key".  
-    Paste the block you copied earlier.  
-    *It is optional yet recommended to give your new key a memorable title.  
-    Click on "Add GPG Key" and you are done!  
+    Go to: https://github.com/settings/keys.
+    
+    Click on "New GPG Key".
+    
+    Paste the block you copied earlier.
+    
+    *It is optional yet recommended to give your new key a memorable title.
+    
+    Click on "Add GPG Key" and you are done!
 
-0. **Optional: activate [Vigilant mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**  
+0. **Optional: activate [Vigilant mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**
+
     Check "Flag unsigned commits as unverified" on the same Github page.
+    
