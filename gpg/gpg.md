@@ -28,7 +28,7 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
 
 ## Steps
 
-0. **Install GnuPG via Choco:**
+1. **Install GnuPG via Choco:**
 
     Open a new PowerShell instance (Administrator), and run the following command:
     ```powershell
@@ -39,14 +39,14 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     
     *This is done to refresh the shell's environment variables, so it will recognize the `gpg` command.
 
-0. **Configurate Git to use Choco's install of GnuPG:**
+1. **Configurate Git to use Choco's install of GnuPG:**
 
     Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
     git config --global gpg.program "C:\Program Files (x86)\gnupg\bin\gpg.exe"
     ```
 
-0. **Generate a new key and copy its ID:**
+1. **Generate a new key and copy its ID:**
 
     Run the following command in the shell, replacing the placeholders with your Github account credentials:
     ```powershell
@@ -76,14 +76,14 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     ```
     The key's id is ```FGFQZF4ERXDVALSJ```, copy it.  
 
-0. **Configurate Git to use the generated key:**
+1. **Configurate Git to use the generated key:**
 
     Run the following command in the shell, replace the placeholder with the key's id:
     ```powershell
     git config --global user.signingkey "KEY_ID"
     ```
 
-0. **Export the key:**
+1. **Export the key:**
 
     Run the following command in the shell, replace the placeholder with the key's id:
     ```powershell
@@ -102,7 +102,7 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     
     Copy the entire above block, including the ```"-----BEGIN..."``` and ```"-----END..."``` lines.
 
-0. **Associate the exported key with your Github account:**
+1. **Associate the exported key with your Github account:**
     
     Go to: https://github.com/settings/keys.
     
@@ -114,7 +114,7 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     
     Click on "Add GPG Key" and you are done!
 
-0. **Optional: activate [Vigilant mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**
+1. **Optional: activate [Vigilant mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**
 
     Check "Flag unsigned commits as unverified" on the same Github page.
     
