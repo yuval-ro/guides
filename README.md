@@ -2,6 +2,8 @@
 
 Welcome to the Development Tools Guides Repository! This repository contains a collection of guides for various development tools to assist you in your coding journey.
 
+READ THE ATTACHED DISCLAIMER & USE AT YOUR OWN RISK!
+
 ## Table of Contents
 
 - [Development Tools Guides Repository](#development-tools-guides-repository)
