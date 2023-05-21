@@ -21,11 +21,10 @@ GnuPG is available for various operating systems, including Windows, macOS, and 
 
 ## Recommendations
 
-* [Chocolatey](https://chocolatey.org/): Choco is a great tool for Windows devs.
-
-If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).
-
-For those who don't want to use it: **open a Git Bash instance instead**, and skip to **step 3**.  
+* [Chocolatey](https://chocolatey.org/)  
+Choco is a great tool for Windows devs.  
+If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).  
+For those who don't want to use it: **open a Git Bash instance instead**, and skip to **step 3**.
 
 ## Steps
 
