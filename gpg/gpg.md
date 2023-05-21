@@ -1,16 +1,30 @@
 # GPG key generation and setup for signing Github commits
 
-## Based on these guides
+## About
+[GnuPG](https://gnupg.org/) (GNU Privacy Guard) is a free and open-source implementation of the OpenPGP (Pretty Good Privacy) standard. It provides cryptographic privacy and authentication for data communication, including email encryption, file encryption, and digital signatures.
+
+GnuPG allows users to generate key pairs, consisting of a public key and a corresponding private key. The public key can be freely distributed to others, while the private key is kept securely by the key owner. The public key is used to encrypt data that can only be decrypted with the corresponding private key, ensuring confidentiality. Additionally, the private key can be used to digitally sign messages, verifying the authenticity and integrity of the data.
+
+GnuPG supports various encryption algorithms and features, including symmetric-key encryption, public-key encryption, key management, and certification. It is compatible with many email clients and other software applications, making it widely used for secure communication and data protection.
+
+GnuPG is available for various operating systems, including Windows, macOS, and Linux. It is a popular choice for individuals and organizations seeking to secure their communications and protect sensitive information.
+
+
+## Sources
 * https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
 * https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
 
+
 ## Prerequisites
 * [Git](https://git-scm.com/)
+
 
 ## Recommendations
 * [Chocolatey](https://chocolatey.org/): Choco is a great tool for Windows devs.  
 For those who don't want to use it - open a Git Bash instance instead, and skip to **step 5**.  
 It should be noted that you can even install Git using Choco.
+
+
 ## Steps
 
 0. **Install Chocolatey:**  

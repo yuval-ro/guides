@@ -1,7 +1,6 @@
-# Oh My Posh Windows setup
+# Oh My Posh
 
 ## About
-
 [Oh My Posh](https://ohmyposh.dev/) is a framework for customizing and enhancing the prompt in your command-line interface (CLI), primarily designed for PowerShell. It provides a highly customizable and visually appealing prompt, allowing you to personalize your command-line experience.
 
 Oh My Posh offers various features, including:
