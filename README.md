@@ -55,7 +55,9 @@ Your contributions will help enrich the repository and benefit the development c
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the guides as per the terms of the license.
+There is no license at the moment.
+
+Please refer to the attached DISCLAIMER.
 
 ---
 
