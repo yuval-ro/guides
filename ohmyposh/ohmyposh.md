@@ -19,7 +19,7 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
 * https://ohmyposh.dev/docs/installation/windows
 
 ## Prerequisites
-* [Choco]([https://scoop.sh](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
+* [Choco](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
 
 ## Recommendations
 * [Consolas Nerd Font](https://github.com/wclr/my-nerd-fonts/blob/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf) 🏴‍☠️
