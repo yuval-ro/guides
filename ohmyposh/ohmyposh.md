@@ -19,18 +19,18 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
 * https://ohmyposh.dev/docs/installation/windows
 
 ## Prerequisites
-* [Scoop](https://scoop.sh/)
+* [Choco]([https://scoop.sh](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
 
 ## Recommendations
 * [Consolas Nerd Font](https://github.com/wclr/my-nerd-fonts/blob/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf) 🏴‍☠️
 
 ## First-time setup
 
-1. **Install OMP using Scoop:**
+1. **Install OMP with Choco:**
 
     Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
-    scoop install oh-my-posh
+    choco install oh-my-posh
     ```
 
 1. **Install a Nerd Font:**
