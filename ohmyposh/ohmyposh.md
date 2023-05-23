@@ -62,7 +62,7 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
     Get-PoshThemes
     ```
     This will demonstrate in the shell all of OMP's endorsed themes.  
-    Once you settled on one, say the "aliens" theme, find its Github URL in [Themes](https://ohmyposh.dev/docs/themes), go to its Github page, select "RAW", and copy the RAW Github URL.
+    Once you settled on one, say the "Powerline" theme, find its Github URL in [Themes](https://ohmyposh.dev/docs/themes), go to its Github page, select "RAW", and copy the RAW Github URL.
 
     Open your `$PROFILE` file via some text editor:
     ```powershell
@@ -71,7 +71,7 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
 
     Paste in the file the following line, where the URL is your selected theme's:
     ```PowerShell
-    oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/aliens.omp.json' | Invoke-Expression
+    oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/powerline.omp.json' | Invoke-Expression
     ```
     
     Save and restart your shell.
@@ -79,5 +79,5 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
 ## Removal
 Open a PowerShell instance (Administrator), and run the following command:
 ```powershell
-scoop uninstall oh-my-posh
+choco uninstall oh-my-posh
 ```
