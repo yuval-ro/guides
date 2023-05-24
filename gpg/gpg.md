@@ -1,6 +1,6 @@
 # GPG key generation and setup for signing Github commits
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/6/61/Gnupg_logo.svg' height='100px'></img>
+![GnuPG logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/400px-Gnupg_logo.svg.png)
 
 ## Table of Contents
 * [About](#about)
