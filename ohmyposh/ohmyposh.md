@@ -21,9 +21,6 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
 ## Prerequisites
 * [Choco](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
 
-## Recommendations
-* [Consolas Nerd Font](https://github.com/wclr/my-nerd-fonts/blob/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf) 🏴‍☠️
-
 ## First-time setup
 
 1. **Install OMP with Choco:**
@@ -33,47 +30,62 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
     choco install oh-my-posh
     ```
 
-1. **Install a Nerd Font:**
+1. **Install a Nerd Font and configurate shells to use it:**
 
-    OMP requires "Nerd Fonts", which are Monospace fonts augmented with symbols and icons.  
-    Without them, most of the themes will not display shell prompts correctly.  
-    Run the following command:
+    OMP requires "Nerd Fonts", which are monospaced fonts augmented with symbols and icons.
+    
+    Without them, most of the themes will not display shell prompts correctly.
+    
+    Run the following command which will list all possible Nerd Fonts OMP offers:
     ```powershell
     oh-my-posh font install
     ```
-    A menu will be listed, of all possible (free-to-use) Nerd Fonts catered by OMP.  
-    Select one of your liking to install.
+    
+    Select one you like, say 'Hack', and install it by pressing Enter.
 
-1. **Set a Nerd Font for PowerShell and VSCode integrated terminal:**
+    After that, configure the following to use 'Hack' as their display font:
 
-    In PowerShell, right click the title bar, then select "Properties">"Font".  
-    Select your installed font from the list and hit "OK".  
+    * PowerShell:
+        * Right-click the title bar
+        * Select "Properties">"Font"
+        * Select "Hack Nerd Font Mono" from the dropdown
+    
+    * Terminal:
+        * Right-click the title bar.
+        * Select "Settings".
+        * From "Profiles" select "Windows PowerShell".
+        * From "Additional Settings" select "Appearance".
+        * From "Font Face" select "Hack Nerd Font Mono" from the dropdown.
 
-    In VSCode, hit Ctrl+Shift+P, then type "settings.json" and hit Enter.  
-    Paste the following key-values inside the JSON object, replacing the placeholders with your installed font's name:  
-    ```json
-    "editor.fontFamily": "NERD_FONT_NAME",
-    "terminal.integrated.fontFamily": "NERD_FONT_NAME",
-    ```
+    * VSCode:
+        * Hit Ctrl+Shift+P, type "settings.json", hit Enter.
+        * Paste the following key-values inside the JSON object in the openeed file, replacing the placeholders with your installed font's name:
+            ```json
+            "editor.fontFamily": "Hack Nerd Font Mono",
+            "terminal.integrated.fontFamily": "Hack Nerd Font Mono"
+            ```
 
-1. **Configure theme:**  
-    Run the following command:
+1. **Configure OMP theme:**  
+    Run the following command, which will demo all of OMP's included themes:
     ```PowerShell
     Get-PoshThemes
     ```
-    This will demonstrate in the shell all of OMP's endorsed themes.  
-    Once you settled on one, say the "Powerline" theme, find its Github URL in [Themes](https://ohmyposh.dev/docs/themes), go to its Github page, select "RAW", and copy the RAW Github URL.
-
-    Open your `$PROFILE` file via some text editor:
+    
+    Select one you like, say 'nu4a', and open your `$PROFILE` file via some text editor:
     ```powershell
     code $PROFILE
     ```
 
-    Paste in the file the following line, where the URL is your selected theme's:
+    Paste in the file the following lines, where the is your selected theme's:
     ```PowerShell
-    oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/powerline.omp.json' | Invoke-Expression
+    # This will call the OMP init script every time a PowerShell instance is started,
+    #  and set the theme to the one defined by the local .json file as follows:
+    oh-my-posh init pwsh --config 'C:\Program Files (x86)\oh-my-posh\themes\nu4a.omp.json' | Invoke-Expression
+    # This will remove the "(venv) " prompt prefix that pip embeds in your shell whenver you are within an activated venv.
+    # Instead, the OMP theme will have its own good-looking prefix.
+    $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
     ```
-    
+
     Save and restart your shell.
 
 ## Removal
