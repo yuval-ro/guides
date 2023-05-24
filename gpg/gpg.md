@@ -1,5 +1,15 @@
 # GPG key generation and setup for signing Github commits
 
+<img src='https://upload.wikimedia.org/wikipedia/commons/6/61/Gnupg_logo.svg' height='100px'></img>
+
+## Table of Contents
+* [About](#about)
+* [Sources](#sources)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Key Generation](#key-generation)
+* [Github Key Configuration](#github-key-configuration)
+
 ## About
 [GnuPG](https://gnupg.org/) (GNU Privacy Guard) is a free and open-source implementation of the OpenPGP (Pretty Good Privacy) standard. It provides cryptographic privacy and authentication for data communication, including email encryption, file encryption, and digital signatures.
 
@@ -16,17 +26,17 @@ GnuPG is available for various operating systems, including Windows, macOS, and 
 
 
 ## Prerequisites
-* [Git](https://git-scm.com/)
-
+[Git](https://git-scm.com/)
+> Git bash for Windows comes with GnuPG (gpg) pre-installed.
 
 ## Recommendations
 
-* [Chocolatey](https://chocolatey.org/)  
-Choco is a great tool for Windows devs.  
-If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).  
-For those who don't want to use it: **open a Git Bash instance instead**, and skip to **step 3**.
+[Chocolatey](https://chocolatey.org/)  
+> Choco is a great tool for Windows devs.  
+> If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).  
+> If you don't want to use choco **open a Git Bash instance instead**, and skip to [Key Generation](#key-generation).  
 
-## Steps
+## Installation
 
 1. **Install GnuPG via Choco:**
 
@@ -35,20 +45,21 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     choco install gpg -y
     ```
     
-    After that, **restart you machine**.  
-    
-    *This is done to refresh the shell's environment variables, so it will recognize the `gpg` command.
+    > **Restart your machine afterwards!**  
+    > This is done to refresh the shell's environment variables, so it will recognize the `gpg` command.
 
-1. **Configurate Git to use Choco's install of GnuPG:**
+1. **Configurate Git to use Choco's installation of GnuPG:**
 
     Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
     git config --global gpg.program "C:\Program Files (x86)\gnupg\bin\gpg.exe"
     ```
 
+## Key Generation
+
 1. **Generate a new key and copy its ID:**
 
-    Run the following command in the shell, replacing the placeholders with your Github account credentials:
+    Run the following command in the shell, replacing the PLACEHOLDERS with your Github account credentials:
     ```powershell
     gpg --quick-generate-key "GITHUB_USERNAME <GITHUB_EMAIL>" rsa sign
     ```
@@ -78,14 +89,16 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
 
 1. **Configurate Git to use the generated key:**
 
-    Run the following command in the shell, replace the placeholder with the key's id:
+    Run the following command in the shell, replace the PLACEHOLDER with the key's id:
     ```powershell
     git config --global user.signingkey "KEY_ID"
     ```
 
+## Github Key Configuration
+
 1. **Export the key:**
 
-    Run the following command in the shell, replace the placeholder with the key's id:
+    Run the following command in the shell, replace the PLACEHOLDER with the key's id:
     ```powershell
     gpg --armor --export "KEY_ID"
     ```
@@ -109,8 +122,7 @@ For those who don't want to use it: **open a Git Bash instance instead**, and sk
     Click on "New GPG Key".
     
     Paste the block you copied earlier.
-    
-    *It is optional yet recommended to give your new key a memorable title.
+    > Naming the key is optional, but I strongly recommended to do so - with a memorable name!
     
     Click on "Add GPG Key" and you are done!
 
