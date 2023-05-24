@@ -76,7 +76,7 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
     code $PROFILE
     ```
 
-    Paste in the file the following lines, where the is your selected theme's:
+    Paste in the opened file the following lines:
     ```PowerShell
     # This will call the OMP init script every time a PowerShell instance is started,
     #  and set the theme to the one defined by the local .json file as follows:
