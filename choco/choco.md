@@ -1,6 +1,6 @@
 # Chocolatey
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/b/b0/Chocolatey_icon.png' height='100px'><img>
+[<img src='https://upload.wikimedia.org/wikipedia/commons/b/b0/Chocolatey_icon.png' height='100px'><img>](https://github.com/chocolatey/choco)
 
 ## Table of Contents
 
