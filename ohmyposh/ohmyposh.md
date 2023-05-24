@@ -1,5 +1,12 @@
 # Oh My Posh
 
+## Table of contents
+- [About](#about)
+- [Sources](#sources)
+- [Prerequistes](#prerequistes)
+- [Installation](#installation)
+- [Removal](#removal)
+
 ## About
 [Oh My Posh](https://ohmyposh.dev/) (OMP) is a framework for customizing and enhancing the prompt in your command-line interface (CLI), primarily designed for PowerShell. It provides a highly customizable and visually appealing prompt, allowing you to personalize your command-line experience.
 
@@ -21,7 +28,7 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
 ## Prerequisites
 * [Choco](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
 
-## First-time setup
+## Installation
 
 1. **Install OMP with Choco:**
 
