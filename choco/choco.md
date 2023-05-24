@@ -7,12 +7,12 @@
 * [About](#about)
 * [Sources](#sources)
 * [Prerequisites](#prerequisites)
-* [Installation](#choco-installation)
+* [Installation](#installation)
 * [Package Management](#package-management)
-* * [Installation](#package-installation)
-* * [Removal](#package-removal)
-* * [Export and import](#export-and-import)
-
+    * [Installation](#installation-1)
+    * [Removal](#removal)
+    * [Export and import](#export-and-import)
+* [Removal](#removal-1)
 
 ## About
 
@@ -30,8 +30,8 @@ With Choco, you can install popular software applications, development tools, ut
 None.
 
 
-## Installation <!-- choco-installation -->
-Open a new PowerShell instance (Administrator), run the following command:
+## Installation
+Open a new PowerShell instance (Administrator) and run the following command:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -48,16 +48,14 @@ choco upgrade chocolatey --pre # USE AT YOUR OWN RISK!
 
 ## Package Management
 
-### Installation <!-- package-installation -->
+### Installation
 
-To install a new packages, run:
+To install a new package, run:
 ```powershell
 choco install firefox -y
 ```
-
-The `-y` flag will auto-accept any prompted installation disclaimer.
-
-Note that Choco will look up the Chocolatey Community Repository for any packages corresponding with your query. You can even supply a regex such as '`fire*`'.
+> The `-y` flag will auto-accept any prompted installation disclaimer.  
+> Choco will look up the [Chocolatey Community Repository](https://docs.chocolatey.org/en-us/community-repository/) for any packages corresponding with your query, where You can even supply a regex such as '`fire*`'.
 
 It is a good practice to run the `search` command before installing, so you can select the exact package you are looking for:
 ```powershell
@@ -77,7 +75,7 @@ Choose your package of choice (with its exact listed name) and run the `install`
 
 It is recommended to only install packages which are marked as Approved.
 
-### Removal <!-- package-removal -->
+### Removal
 
 To remove a specific package, run:
 ```powershell
@@ -107,4 +105,16 @@ This will create a file with the following path: `%USERPROFILE%/packages.config`
 To import and install packages from such file, run:
 ```powershell
 choco install "path/to/packages.config"
+```
+
+## Removal
+
+Make sure you remove leftover programs and applications previously installed via Choco:
+```powershell
+choco uninstall all -y
+```
+
+Then run:
+```powershell
+rm -R $env:ChocolateyInstall
 ```
