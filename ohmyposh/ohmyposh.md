@@ -46,13 +46,11 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
     After that, configure the following to use 'Hack' as their display font:
 
     * PowerShell:
-        * Right-click the title bar
-        * Select "Properties">"Font"
-        * Select "Hack Nerd Font Mono" from the dropdown
+        * Right-click the title bar and select "Priperties".
+        * In "Font" tab, select "Hack Nerd Font Mono" from the dropdown.
     
     * Terminal:
-        * Right-click the title bar.
-        * Select "Settings".
+        * Right-click the title bar and select "Settings".
         * From "Profiles" select "Windows PowerShell".
         * From "Additional Settings" select "Appearance".
         * From "Font Face" select "Hack Nerd Font Mono" from the dropdown.
