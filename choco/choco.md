@@ -1,20 +1,36 @@
 # Chocolatey
 
+<img src='https://upload.wikimedia.org/wikipedia/commons/b/b0/Chocolatey_icon.png' height='100px'><img>
+
+## Table of Contents
+
+* [About](#about)
+* [Sources](#sources)
+* [Prerequisites](#prerequisites)
+* [Installation](#choco-installation)
+* [Package Management](#package-management)
+* * [Installation](#package-installation)
+* * [Removal](#package-removal)
+* * [Export and import](#export-and-import)
+
+
 ## About
 
 [Choco](https://chocolatey.org/) (short, "Chocolatey") is a package manager for Windows that simplifies the process of installing, managing, and updating software packages on your system. It provides a command-line interface (CLI) through which you can search for, install, and uninstall software packages with ease.
 
 With Choco, you can install popular software applications, development tools, utilities, and other packages directly from the command line, without the need to manually download and install them from individual websites. Choco manages the entire process for you, including dependency resolution and version tracking.
 
-## Prerequisites
-None.
 
 ## Sources
 * https://chocolatey.org/install
 * https://community.chocolatey.org/packages/chocolatey
 * https://docs.chocolatey.org/en-us/choco/commands/
 
-## First-time setup
+## Prerequisites
+None.
+
+
+## Installation <!-- choco-installation -->
 Open a new PowerShell instance (Administrator), run the following command:
 
 ```powershell
@@ -30,7 +46,9 @@ choco upgrade chocolatey
 choco upgrade chocolatey --pre # USE AT YOUR OWN RISK!
 ```
 
-## Package installation
+## Package Management
+
+### Installation <!-- package-installation -->
 
 To install a new packages, run:
 ```powershell
@@ -59,7 +77,7 @@ Choose your package of choice (with its exact listed name) and run the `install`
 
 It is recommended to only install packages which are marked as Approved.
 
-## Package removal
+### Removal <!-- package-removal -->
 
 To remove a specific package, run:
 ```powershell
@@ -77,7 +95,7 @@ To remove all installed packages, run:
 choco uninstall all -y
 ```
 
-## Package list export/import
+### Export and Import
 
 To export your list of locally installed packages, you can run:
 ```powershell
