@@ -1,5 +1,8 @@
 # Oh My Posh
 
+<img src='https://raw.githubusercontent.com/jandedobbeleer/oh-my-posh/main/website/static/img/logo.png' height='200px'></img>
+
+
 ## Table of contents
 * [About](#about)
 * [Sources](#sources)
