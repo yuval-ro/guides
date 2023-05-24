@@ -1,32 +1,35 @@
 # Oh My Posh
 
 ## Table of contents
-- [About](#about)
-- [Sources](#sources)
-- [Prerequistes](#prerequistes)
-- [Installation](#installation)
-- [Removal](#removal)
+* [About](#about)
+* [Sources](#sources)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Removal](#removal)
+
 
 ## About
-[Oh My Posh](https://ohmyposh.dev/) (OMP) is a framework for customizing and enhancing the prompt in your command-line interface (CLI), primarily designed for PowerShell. It provides a highly customizable and visually appealing prompt, allowing you to personalize your command-line experience.
+From the [Oh My Posh](https://ohmyposh.dev/) site:
 
-OMP offers various features, including:
+A prompt theme engine for any shell.
 
-1. Themes: It comes with a collection of pre-configured themes that you can choose from, allowing you to customize the appearance of your prompt.
+### Colors:
+Oh My Posh enables you to use the full color set of your terminal by using colors to define and render the prompt.
 
-1. Segments: OMP allows you to add segments to your prompt, such as displaying the current Git branch, the current directory, or the status of your Git repository.
+### Customizable:
+Easily adjust existing themes or create your own. From standard segments all the way to custom implementations.
 
-1. Customization: You can further customize your prompt by modifying the themes, creating your own custom themes, or adding and configuring segments according to your preferences.
+### Portable:
+No matter which shell you're using, or even how many, you can carry the configuration from one shell and/or machine to another for the same prompt everywhere you work.
 
-1. Compatibility: OMP is designed to work with various shells, including PowerShell, PowerShell Core, Windows Terminal, and more.
-
-Note that OMP is primarily focused on PowerShell, and if you are using a different shell, there might be alternative prompt customization frameworks available specific to that shell.
 
 ## Sources
 * https://ohmyposh.dev/docs/installation/windows
 
+
 ## Prerequisites
 * [Choco](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
+
 
 ## Installation
 
@@ -92,6 +95,7 @@ Note that OMP is primarily focused on PowerShell, and if you are using a differe
     ```
 
     Save and restart your shell.
+
 
 ## Removal
 Open a PowerShell instance (Administrator), and run the following command:
