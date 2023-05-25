@@ -1,29 +1,22 @@
 # Oh My Posh
 
-<img src='https://raw.githubusercontent.com/jandedobbeleer/oh-my-posh/main/website/static/img/logo.png' height='200px'></img>
-
-
 ## Table of contents
-* [About](#about)
-* [Sources](#sources)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
-* [Removal](#removal)
+- [Oh My Posh](#oh-my-posh)
+  - [Table of contents](#table-of-contents)
+  - [About](#about)
+  - [Sources](#sources)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Removal](#removal)
 
 
 ## About
 From the [Oh My Posh](https://ohmyposh.dev/) site:
 
-A prompt theme engine for any shell.
-
-### Colors:
-Oh My Posh enables you to use the full color set of your terminal by using colors to define and render the prompt.
-
-### Customizable:
-Easily adjust existing themes or create your own. From standard segments all the way to custom implementations.
-
-### Portable:
-No matter which shell you're using, or even how many, you can carry the configuration from one shell and/or machine to another for the same prompt everywhere you work.
+>"A prompt theme engine for any shell.  
+>Colors - Oh My Posh enables you to use the full color set of your terminal by using colors to define and render the prompt.  
+>Customizable - Easily adjust existing themes or create your own. From standard segments all the way to custom implementations.  
+>Portable - No matter which shell you're using, or even how many, you can carry the configuration from one shell and/or machine to another for the same prompt everywhere you work."
 
 
 ## Sources
@@ -36,14 +29,14 @@ No matter which shell you're using, or even how many, you can carry the configur
 
 ## Installation
 
-1. **Install OMP with Choco:**
+1. **Install oh-my-posh using choco:**
 
     Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
     choco install oh-my-posh
     ```
 
-1. **Install a Nerd Font and configurate shells to use it:**
+1. **Install a Nerd Font and configurate all shells to use it:**
 
     OMP requires "Nerd Fonts", which are monospaced fonts augmented with symbols and icons.
     
@@ -76,7 +69,7 @@ No matter which shell you're using, or even how many, you can carry the configur
             "terminal.integrated.fontFamily": "Hack Nerd Font Mono"
             ```
 
-1. **Configure OMP theme:**  
+1. **Configure a theme:**  
     Run the following command, which will demo all of OMP's included themes:
     ```PowerShell
     Get-PoshThemes

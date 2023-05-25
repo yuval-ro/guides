@@ -1,18 +1,21 @@
 # Chocolatey
 
-![Chocolatey logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Chocolatey_icon.svg/200px-Chocolatey_icon.svg.png)
+<a title="Chocolatey, Apache License 2.0 &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Chocolatey_icon.svg"><img width="256" alt="Chocolatey icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Chocolatey_icon.svg/256px-Chocolatey_icon.svg.png"></a>
+
 
 ## Table of Contents
 
-* [About](#about)
-* [Sources](#sources)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
-* [Package Management](#package-management)
-    * [Installation](#installation-1)
-    * [Removal](#removal)
-    * [Export and import](#export-and-import)
-* [Removal](#removal-1)
+- [Chocolatey](#chocolatey)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Sources](#sources)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Package Management](#package-management)
+    - [Installation](#installation-1)
+    - [Removal](#removal)
+    - [Export and Import](#export-and-import)
+  - [Removal](#removal-1)
 
 ## About
 

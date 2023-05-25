@@ -1,14 +1,19 @@
 # GPG key generation and setup for signing Github commits
 
-![GnuPG logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/400px-Gnupg_logo.svg.png)
+
+<a title="Thomas Wittek, vector by Adrian Neumann, GPLv3 &lt;http://www.gnu.org/licenses/gpl-3.0.html&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:GnuPG-Logo.svg"><img width="64" alt="GnuPG-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/GnuPG-Logo.svg/64px-GnuPG-Logo.svg.png"></a>
+
 
 ## Table of Contents
-* [About](#about)
-* [Sources](#sources)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
-* [Key Generation](#key-generation)
-* [Github Key Configuration](#github-key-configuration)
+- [GPG key generation and setup for signing Github commits](#gpg-key-generation-and-setup-for-signing-github-commits)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [Sources](#sources)
+  - [Prerequisites](#prerequisites)
+  - [Recommendations](#recommendations)
+  - [Installation](#installation)
+  - [Key Generation](#key-generation)
+  - [Github Key Configuration](#github-key-configuration)
 
 ## About
 [GnuPG](https://gnupg.org/) (GNU Privacy Guard) is a free and open-source implementation of the OpenPGP (Pretty Good Privacy) standard. It provides cryptographic privacy and authentication for data communication, including email encryption, file encryption, and digital signatures.
