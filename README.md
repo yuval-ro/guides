@@ -12,7 +12,6 @@ This repository contains a collection of guides for various development tools to
   - [Usage](#usage)
   - [Legal](#legal)
     - [Copyright Notice](#copyright-notice)
-    - [Licensing](#licensing)
 
 ## Introduction
 
@@ -45,7 +44,3 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
-
-### Licensing
-
-This repository is licensed under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.txt), see the [LICENSE]() file for details.

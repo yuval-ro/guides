@@ -1,5 +1,15 @@
 # GPG key generation and setup for signing Github commits
 
+![GnuPG logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Gnupg_logo.svg/400px-Gnupg_logo.svg.png)
+
+## Table of Contents
+* [About](#about)
+* [Sources](#sources)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Key Generation](#key-generation)
+* [Github Key Configuration](#github-key-configuration)
+
 ## About
 [GnuPG](https://gnupg.org/) (GNU Privacy Guard) is a free and open-source implementation of the OpenPGP (Pretty Good Privacy) standard. It provides cryptographic privacy and authentication for data communication, including email encryption, file encryption, and digital signatures.
 
@@ -16,50 +26,53 @@ GnuPG is available for various operating systems, including Windows, macOS, and 
 
 
 ## Prerequisites
-* [Git](https://git-scm.com/)
-
+[Git](https://git-scm.com/)
+> Git bash for Windows comes with GnuPG (gpg) pre-installed.
 
 ## Recommendations
-* [Chocolatey](https://chocolatey.org/): Choco is a great tool for Windows devs.  
-For those who don't want to use it - open a Git Bash instance instead, and skip to **step 5**.  
-It should be noted that you can even install Git using Choco.
 
+[Chocolatey](https://chocolatey.org/)  
+> Choco is a great tool for Windows devs.  
+> If you haven't installed it yet, please refer to the [Choco guide](https://github.com/yuval-ro/guides/blob/master/choco/choco.md).  
+> If you don't want to use choco **open a Git Bash instance instead**, and skip to [Key Generation](#key-generation).  
 
-## Steps
+## Installation
 
-0. **Install Chocolatey:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command in the shell:  
-    ```powershell
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    ```
+1. **Install GnuPG via Choco:**
 
-0. **Install GnuPG:**  
-    Run the following command in the shell:  
+    Open a new PowerShell instance (Administrator), and run the following command:
     ```powershell
     choco install gpg -y
     ```
-    After that, **restart you machine**.  
-    *This is done to refresh the shell's environment variables, so it will recognize the `gpg` command.
+    
+    > **Restart your machine afterwards!**  
+    > This is done to refresh the shell's environment variables, so it will recognize the `gpg` command.
 
-0. **Configurate Git to use Choco's install of GnuPG:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command in the shell:  
+1. **Configurate Git to use Choco's installation of GnuPG:**
+
+    Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
     git config --global gpg.program "C:\Program Files (x86)\gnupg\bin\gpg.exe"
     ```
 
-0. **Generate a new key and copy its ID:**  
-    Run the following command in the shell, replacing the placeholders with your Github account credentials:  
+## Key Generation
+
+1. **Generate a new key and copy its ID:**
+
+    Run the following command in the shell, replacing the PLACEHOLDERS with your Github account credentials:
     ```powershell
     gpg --quick-generate-key "GITHUB_USERNAME <GITHUB_EMAIL>" rsa sign
     ```
-    You will be prompted to enter a **passphrase**.  
-    *Make sure you write it down, since GnuPG will ask for it whenever pushing commits to a remote!  
+    
+    You will be prompted to enter a **passphrase**.
+    
+    *Make sure you write it down, since GnuPG will ask for it whenever pushing commits to a remote!
+    
     Once done, run this:  
     ```powershell
     gpg --list-secret-keys --keyid-format long
     ```
+    
     The output will be something like this:
     ```
     gpg: checking the trustdb
@@ -74,17 +87,22 @@ It should be noted that you can even install Git using Choco.
     ```
     The key's id is ```FGFQZF4ERXDVALSJ```, copy it.  
 
-0. **Configurate Git to use the generated key:**  
-    Run the following command in the shell, replace the placeholder with the key's id:
+1. **Configurate Git to use the generated key:**
+
+    Run the following command in the shell, replace the PLACEHOLDER with the key's id:
     ```powershell
     git config --global user.signingkey "KEY_ID"
     ```
 
-0. **Export the key:**  
-    Run the following command in the shell, replace the placeholder with the key's id:
+## Github Key Configuration
+
+1. **Export the key:**
+
+    Run the following command in the shell, replace the PLACEHOLDER with the key's id:
     ```powershell
     gpg --armor --export "KEY_ID"
     ```
+    
     The output will be something like this:
     ```
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -94,15 +112,21 @@ It should be noted that you can even install Git using Choco.
     =CcT7
     -----END PGP PUBLIC KEY BLOCK-----
     ```
+    
     Copy the entire above block, including the ```"-----BEGIN..."``` and ```"-----END..."``` lines.
 
-0. **Associate the exported key with your Github account:**  
+1. **Associate the exported key with your Github account:**
     
-    Go to: https://github.com/settings/keys.  
-    Click on "New GPG Key".  
-    Paste the block you copied earlier.  
-    *It is optional yet recommended to give your new key a memorable title.  
-    Click on "Add GPG Key" and you are done!  
+    Go to: https://github.com/settings/keys.
+    
+    Click on "New GPG Key".
+    
+    Paste the block you copied earlier.
+    > Naming the key is optional, but I strongly recommended to do so - with a memorable name!
+    
+    Click on "Add GPG Key" and you are done!
 
-0. **Optional: activate [Vigilant mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**  
+1. **Optional: activate [Vigilant mode](https://docs.github.com/en/authentication/managing-commit-signature-verification/displaying-verification-statuses-for-all-of-your-commits)**
+
     Check "Flag unsigned commits as unverified" on the same Github page.
+    

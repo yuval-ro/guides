@@ -1,80 +1,107 @@
 # Oh My Posh
 
+<img src='https://raw.githubusercontent.com/jandedobbeleer/oh-my-posh/main/website/static/img/logo.png' height='200px'></img>
+
+
+## Table of contents
+* [About](#about)
+* [Sources](#sources)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Removal](#removal)
+
+
 ## About
-[Oh My Posh](https://ohmyposh.dev/) (OMP) is a framework for customizing and enhancing the prompt in your command-line interface (CLI), primarily designed for PowerShell. It provides a highly customizable and visually appealing prompt, allowing you to personalize your command-line experience.
+From the [Oh My Posh](https://ohmyposh.dev/) site:
 
-OMP offers various features, including:
+A prompt theme engine for any shell.
 
-0. Themes: It comes with a collection of pre-configured themes that you can choose from, allowing you to customize the appearance of your prompt.
+### Colors:
+Oh My Posh enables you to use the full color set of your terminal by using colors to define and render the prompt.
 
-0. Segments: OMP allows you to add segments to your prompt, such as displaying the current Git branch, the current directory, or the status of your Git repository.
+### Customizable:
+Easily adjust existing themes or create your own. From standard segments all the way to custom implementations.
 
-0. Customization: You can further customize your prompt by modifying the themes, creating your own custom themes, or adding and configuring segments according to your preferences.
+### Portable:
+No matter which shell you're using, or even how many, you can carry the configuration from one shell and/or machine to another for the same prompt everywhere you work.
 
-0. Compatibility: OMP is designed to work with various shells, including PowerShell, PowerShell Core, Windows Terminal, and more.
-
-Please note that OMP is primarily focused on PowerShell, and if you are using a different shell, there might be alternative prompt customization frameworks available specific to that shell.
 
 ## Sources
 * https://ohmyposh.dev/docs/installation/windows
 
+
 ## Prerequisites
-* [Scoop](https://scoop.sh/)
+* [Choco](https://github.com/yuval-ro/guides/blob/master/choco/choco.md)
 
-## Recommendations
-* [Consolas Nerd Font](https://github.com/wclr/my-nerd-fonts/blob/master/Consolas%20NF/Consolas%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf) 🏴‍☠️
 
-## First-time setup
+## Installation
 
-0. **Install Oh My Posh with Scoop:**  
-    Open a PowerShell instance (Administrator).  
-    Run the following command:
+1. **Install OMP with Choco:**
+
+    Open a PowerShell instance (Administrator) and run the following command:
     ```powershell
-    scoop install oh-my-posh
+    choco install oh-my-posh
     ```
 
-0. **Install fonts:**  
-    OMP requires "Nerd Fonts", which are Monospace fonts augmented with symbols and icons.  
-    Without them, most of the themes will not display the prompts correctly.  
-    Run the following command:
+1. **Install a Nerd Font and configurate shells to use it:**
+
+    OMP requires "Nerd Fonts", which are monospaced fonts augmented with symbols and icons.
+    
+    Without them, most of the themes will not display shell prompts correctly.
+    
+    Run the following command which will list all possible Nerd Fonts OMP offers:
     ```powershell
     oh-my-posh font install
     ```
-    A menu will be listed, of all possible (free-to-use) Nerd Fonts catered by OMP.  
-    Select one of your liking to install.
+    
+    Select one you like, say 'Hack', and install it by pressing Enter.
 
-0. **Configure the font in PowerShell and VSCode:**  
-    In PowerShell, right click the title bar, then select "Properties">"Font".  
-    Select your installed font from the list and hit "OK".  
+    After that, configure the following to use 'Hack' as their display font:
 
-    In VSCode, hit Ctrl+Shift+P, then type "settings.json" and hit Enter.  
-    Paste the following key-values inside the JSON object, replacing the placeholders with your installed font's name:  
-    ```json
-    "editor.fontFamily": "NERD_FONT_NAME",
-    "terminal.integrated.fontFamily": "NERD_FONT_NAME",
-    ```
+    * PowerShell:
+        * Right-click the title bar and select "Properties".
+        * From "Font" tab select "Hack Nerd Font Mono" from the dropdown.
+    
+    * Terminal:
+        * Right-click the title bar and select "Settings".
+        * From "Profiles" select "Windows PowerShell".
+        * From "Additional Settings" select "Appearance".
+        * From "Font Face" select "Hack Nerd Font Mono" from the dropdown.
 
-0. **Configure theme:**  
-    In PowerShell, run the following command:
+    * VSCode:
+        * Hit Ctrl+Shift+P, type "settings.json", hit Enter.
+        * Paste the following key-values inside the JSON object in the openeed file, replacing the placeholders with your installed font's name:
+            ```json
+            "editor.fontFamily": "Hack Nerd Font Mono",
+            "terminal.integrated.fontFamily": "Hack Nerd Font Mono"
+            ```
+
+1. **Configure OMP theme:**  
+    Run the following command, which will demo all of OMP's included themes:
     ```PowerShell
     Get-PoshThemes
     ```
-    This will demonstrate in the shell all of OMP's endorsed themes.  
-    Once you settled on one, say the "aliens" theme, find its Github URL in [Themes](https://ohmyposh.dev/docs/themes), go to its Github page, select "RAW", and copy the RAW Github URL.
-
-    Open your `$PROFILE` file via some text editor:
+    
+    Select one you like, say 'nu4a', and open your `$PROFILE` file via some text editor:
     ```powershell
     code $PROFILE
     ```
 
-    Paste in the file the following command, where the URL is your selected theme's:
+    Paste in the opened file the following lines:
     ```PowerShell
-    oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/aliens.omp.json' | Invoke-Expression
+    # This will call the OMP init script every time a PowerShell instance is started,
+    #  and set the theme to the one defined by the local .json file as follows:
+    oh-my-posh init pwsh --config 'C:\Program Files (x86)\oh-my-posh\themes\nu4a.omp.json' | Invoke-Expression
+    # This will remove the "(venv) " prompt prefix that pip embeds in your shell whenver you are within an activated venv.
+    # Instead, the OMP theme will have its own good-looking prefix.
+    $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
     ```
+
     Save and restart your shell.
+
 
 ## Removal
 Open a PowerShell instance (Administrator), and run the following command:
 ```powershell
-scoop uninstall oh-my-posh
+choco uninstall oh-my-posh
 ```
