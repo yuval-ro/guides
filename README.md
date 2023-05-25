@@ -20,4 +20,6 @@ To access a particular guide, simply navigate to the corresponding folder and op
 The Markdown files are formatted with clear instructions, code snippets, and examples to facilitate understanding and implementation.
 
 ## License
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+Any educational, informative, descriptive, or guiding work in form of .txt or .md files within this repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+All other material within this repository is licensed under [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.txt).
