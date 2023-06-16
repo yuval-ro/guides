@@ -1,27 +1,22 @@
-# Development Tools Guides Repository
+# Guides
 
-Welcome to the Development Tools Guides Repository!
+# About
 
-This repository contains a collection of guides for various development tools to assist you in your coding journey.
+This repository is a pro-bono aggregation of self-written guides for programming and development tools, using ONLY concise and clear instructions in simple English.
 
-## Table of Contents
-- [Development Tools Guides Repository](#development-tools-guides-repository)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Usage](#usage)
-  - [License](#license)
+My aim is to assist all Windows developers who wish to up their knowledge and productivity; If you are such person, I think you will find this repo helpful.
 
-## Introduction
-In this repository, you will find a comprehensive set of guides that cover different development tools, frameworks, and libraries.  
-Whether you are a beginner or an experienced developer, these guides aim to provide step-by-step instructions, tips, and best practices to help you leverage these tools effectively.
+*E&OE*
 
-## Usage
-To access a particular guide, simply navigate to the corresponding folder and open the associated Markdown file.  
-The Markdown files are formatted with clear instructions, code snippets, and examples to facilitate understanding and implementation.
+# Contributions
 
-## License
+Only issues regarding mistakes in the guides themselves will be reviewed - feel free to open issues regarding these.
+
+# License
 ![by-nc-sa-4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-Any educational, informative, descriptive, or guiding work in form of .txt or .md files within this repository is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+All educational and/or informative work is licensed under the [CC BY-NC-SA 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-All other material within this repository is licensed under [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.txt).
+All other material is licensed under the [GPLv3](./LICENSE).
+
+Copyright (c) 2023 yuval-ro. All rights reserved.
